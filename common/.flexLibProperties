@@ -8,6 +8,12 @@
     <classEntry path="controllers.GameController"/>
     <classEntry path="framework.Assets"/>
     <classEntry path="framework.Application"/>
+    <classEntry path="views.CellView"/>
+    <classEntry path="controllers.CellController"/>
+    <classEntry path="models.CellModel"/>
+    <classEntry path="views.LevelView"/>
+    <classEntry path="models.LevelModel"/>
+    <classEntry path="controllers.LevelController"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

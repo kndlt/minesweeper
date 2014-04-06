@@ -8,9 +8,9 @@ package views
 	public class GameView extends View
 	{
 		
-		public function GameView()
+		public function GameView(parameters:*)
 		{
-			super(new GameController(this));
+			super(new GameController(this, parameters));
 			
 			/*
 			var quad:Quad = new Quad(200,200,0x00ffff);

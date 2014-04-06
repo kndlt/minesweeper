@@ -2,5 +2,5 @@
 <TextureAtlas imagePath="AtlasCommon.png">
 	<!-- Created with Adobe Flash Professional version 13.1.0.226 -->
 	<!-- http://www.adobe.com/products/flash.html -->
-	<SubTexture name="obj_tile0000" x="2" y="2" width="39" height="39" pivotX="82.9" pivotY="4.25"/>
+	<SubTexture name="obj_sprite_cell0000" x="2" y="2" width="39" height="39" pivotX="82.9" pivotY="4.25"/>
 </TextureAtlas>

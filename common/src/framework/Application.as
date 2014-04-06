@@ -1,6 +1,6 @@
 package framework
 {
-	import controllers.Controller;
+	import models.GameModel;
 	
 	import starling.display.Sprite;
 	import starling.events.Event;
@@ -23,8 +23,18 @@ package framework
 		// boostrap
 		public function Application()
 		{
-			_view = new GameView();
+			this.addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
+		}
+		private function onAddedToStage(event:Event):void{
+			this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
+			
+			var gameParameters:Object = {
+				difficulty: GameModel.DIFFICULTY_EASY
+			}; 
+			_view = new GameView(gameParameters); // creating a new view should automatically instanciate controllers and views
 			this.addChild(_view);
+			
+			
 			this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 			
 		}

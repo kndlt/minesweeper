@@ -22,7 +22,7 @@ package framework
 		
 		public static function getAtlasCommon():TextureAtlas{
 			if(atlasCommon == null){
-				var texture:Texture = getTexture("AtlasTextureGame");
+				var texture:Texture = getTexture("AtlasCommon");
 				var xml:XML = XML(new AtlasCommonXml());
 				//trace(texture);
 				atlasCommon = new TextureAtlas(texture,xml);

@@ -28,7 +28,7 @@ package controllers
 		* most likely, you will be doing the following in your view constructor:
 		* super(new YourController(this));
 		*/
-		public function Controller(model:Model, view:View)
+		public function Controller(view:View, model:Model)
 		{
 			super();
 			_model = model;
@@ -80,7 +80,16 @@ package controllers
 			return newView;
 		}
 
-
+		/*
+		* (proxy) 
+		* check if parameter exists, if it does return the param,
+		* otherwise return default value
+		*/
+		protected function withDefault(value, defaultValue = null):*
+		{
+			if(value===null || value===undefined) return defaultValue;
+			return value;
+		}
 				
 	}
 }
