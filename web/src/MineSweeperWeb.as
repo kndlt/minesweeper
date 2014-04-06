@@ -1,10 +1,8 @@
 package
 {
-	import flash.desktop.NativeApplication;
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
-	import flash.events.Event;
 	import flash.geom.Rectangle;
 	import flash.system.Capabilities;
 	
@@ -16,12 +14,12 @@ package
 	
 	import views.GameView;
 	
-	[SWF(width="760", height="570", frameRate="60", backgroundColor="#000000")]
-	public class MineSweeperMobile extends Sprite
+	
+	[SWF(width="760", height="570", frameRate="60")]
+	public class MineSweeperWeb extends Sprite
 	{
 		private var starlingGame:Starling;
-		private var debugDrawSprite:Sprite;
-		public function MineSweeperMobile()
+		public function MineSweeperWeb()
 		{
 			//simulate iPhone Retina - needed for consistent feathers style
 			DeviceCapabilities.dpi = 326; 
@@ -53,15 +51,7 @@ package
 			starlingGame.simulateMultitouch  = false;
 			starlingGame.enableErrorChecking = false;
 			
-			starlingGame.start();			
-			
-			NativeApplication.nativeApplication.addEventListener(
-				flash.events.Event.ACTIVATE, function (e:*):void { starlingGame.start(); });
-			
-			NativeApplication.nativeApplication.addEventListener(
-				flash.events.Event.DEACTIVATE, function (e:*):void { starlingGame.stop(true); });
+			starlingGame.start();		
 		}
-		
-		
 	}
 }
