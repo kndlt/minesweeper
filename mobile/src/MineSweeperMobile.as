@@ -10,6 +10,8 @@ package
 	
 	import feathers.system.DeviceCapabilities;
 	
+	import framework.Application;
+	
 	import starling.core.Starling;
 	import starling.utils.RectangleUtil;
 	import starling.utils.ScaleMode;
@@ -37,18 +39,18 @@ package
 			
 			// Create a Starling instance that will run the "Game" class
 			var viewPort:Rectangle = RectangleUtil.fit(
-				new Rectangle(0, 0, GameView.stageWidth, GameView.stageHeight), 
+				new Rectangle(0, 0, Application.stageWidth, Application.stageHeight), 
 				new Rectangle(0, 0, stage.fullScreenWidth, stage.fullScreenHeight), 
 				ScaleMode.SHOW_ALL, 
 				false
 			);
 			
 			
-			starlingGame = new Starling(GameView, stage, viewPort);			
+			starlingGame = new Starling(Application, stage, viewPort);			
 			starlingGame.antiAliasing = 0; 
 			starlingGame.showStats = false;
-			starlingGame.stage.stageWidth  = GameView.stageWidth; 
-			starlingGame.stage.stageHeight = GameView.stageHeight; 
+			starlingGame.stage.stageWidth  = Application.stageWidth; 
+			starlingGame.stage.stageHeight = Application.stageHeight; 
 			
 			starlingGame.simulateMultitouch  = false;
 			starlingGame.enableErrorChecking = false;
