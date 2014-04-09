@@ -13,7 +13,7 @@ package screens
 	
 	import widgets.GameEnd;
 	import widgets.HelpWidget;
-	import widgets.Level;
+	import models.Level;
 
 	public class InGame extends Obj
 	{

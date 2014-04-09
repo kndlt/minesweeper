@@ -1,4 +1,4 @@
-package widgets
+package models
 {
 	import feathers.controls.LayoutGroup;
 	import feathers.layout.TiledRowsLayout;

@@ -11,7 +11,7 @@ package objects
 	import starling.utils.HAlign;
 	import starling.utils.VAlign;
 	
-	import widgets.Level;
+	import models.Level;
 
 	public class Tile extends Obj
 	{
