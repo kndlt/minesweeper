@@ -2,6 +2,8 @@ package controllers
 {
 	import models.LevelModel;
 	
+	import starling.display.Quad;
+	
 	import views.CellView;
 	import views.LevelView;
 	import views.View;
@@ -23,6 +25,8 @@ package controllers
 			_levelModel.field     = new Vector.<CellController>();
 			_levelModel.bombCount = 0;
 			
+			_levelView.addChild(new Quad(100,100));
+			
 			trace('Creating Level');
 			// initialize the grid
 			for(var i:int=0; i<_levelModel.numRow; i++){
@@ -33,8 +37,7 @@ package controllers
 					};
 					var cellView:CellView = new CellView(cellParameters);
 					_levelModel.field.push(cellView.controller);
-					
-					this.view.addChild(cellView);
+					//this.view.addChild(cellView);
 				}	
 			}
 			
@@ -51,6 +54,7 @@ package controllers
 				bombCount++;
 			}
 			
+			traceLevel();
 			
 		}
 		
